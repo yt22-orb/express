@@ -3,15 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>TechVision - Innovative Digital Solutions</title>
+    <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/blog">Blog</a>
+        </nav>
+
+        <div class="hero">
+            <h1>TechVision</h1>
+            <p>Transforming businesses through innovative digital solutions, cutting-edge design, and exceptional user experiences</p>
+            <p class="subtitle">Ready to elevate your digital presence? Let's create something extraordinary together.</p>
+            <a href="/contact" class="btn btn-primary">Get Started</a>
+            <a href="/about" class="btn">Learn More</a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🚀 Innovation First</h3>
+                <p>We leverage the latest technologies including AI, machine learning, and advanced frameworks to create solutions that push the boundaries of what's possible in digital experiences.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Lightning Performance</h3>
+                <p>Our optimized solutions deliver exceptional speed and performance, ensuring your users enjoy seamless experiences that convert visitors into loyal customers.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Beautiful Design</h3>
+                <p>Every pixel is crafted with purpose. Our design philosophy combines aesthetic excellence with functional usability to create interfaces that captivate and engage.</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Support Available</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h2>Web Development Excellence</h2>
+                <p>From responsive websites to complex web applications, we build digital solutions that scale with your business. Our development process focuses on clean code, performance optimization, and future-proof architecture.</p>
+                <ul>
+                    <li>Custom Web Applications</li>
+                    <li>E-commerce Solutions</li>
+                    <li>Progressive Web Apps</li>
+                    <li>API Development & Integration</li>
+                </ul>
+                <a href="/contact" class="btn">Start Your Project</a>
+            </div>
+            <div class="feature-icon">💻</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h2>Mobile-First Design</h2>
+                <p>In today's mobile world, responsive design isn't optional—it's essential. We create experiences that look stunning and function perfectly across all devices and screen sizes.</p>
+                <ul>
+                    <li>Mobile-Responsive Layouts</li>
+                    <li>Touch-Optimized Interfaces</li>
+                    <li>Cross-Platform Compatibility</li>
+                    <li>Performance Optimization</li>
+                </ul>
+                <a href="/about" class="btn">Our Approach</a>
+            </div>
+            <div class="feature-icon">📱</div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h2>Digital Strategy & Consulting</h2>
+                <p>We don't just build websites—we create digital strategies that drive results. Our consulting services help you navigate the digital landscape and make informed decisions.</p>
+                <ul>
+                    <li>Digital Strategy Planning</li>
+                    <li>Technology Consulting</li>
+                    <li>Performance Analytics</li>
+                    <li>Growth Optimization</li>
+                </ul>
+                <a href="/contact" class="btn">Get Consultation</a>
+            </div>
+            <div class="feature-icon">🎯</div>
+        </div>
+
+        <div class="card text-center mb-5">
+            <h2>Ready to Transform Your Digital Presence?</h2>
+            <p>Join hundreds of satisfied clients who have already revolutionized their online presence with TechVision. Let's discuss your project and create something amazing together.</p>
+            <a href="/contact" class="btn btn-primary">Start Your Journey</a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
+                    entry.target.style.transition = 'all 0.6s ease';
+                    
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and features
+        document.querySelectorAll('.card, .feature, .stats').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add hover effects to stats
+        document.querySelectorAll('.stat-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateY(-10px) scale(1.05)';
+                item.style.transition = 'all 0.3s ease';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>

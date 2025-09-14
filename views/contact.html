@@ -3,15 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>Contact TechVision - Let's Build Something Amazing</title>
+    <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-    <h1>Welcome to the Contact Page</h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </nav>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/blog">Blog</a>
+        </nav>
+
+        <div class="hero">
+            <h1>Get In Touch</h1>
+            <p>Ready to transform your digital presence? Let's discuss your project and create something extraordinary together</p>
+            <p class="subtitle">We're here to help bring your vision to life with innovative solutions and exceptional service.</p>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <h3>Email Us</h3>
+                <p><strong>General Inquiries:</strong><br></p>
+                <p><strong>Support:</strong><br></p>
+                <p><strong>Business:</strong><br></p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <h3>Call Us</h3>
+                <p><strong>Main Office:</strong><br>+00000000000 </p>
+                <p><strong>Support Line:</strong><br>+00000000000</p>
+                <p><strong>Available:</strong><br>24/7 Emergency Support</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p><strong>Headquarters:</strong></p>
+                <p><strong>Hours:</strong><br>Mon-Fri: 9AM-6PM<br>Weekends: By Appointment</p>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company" placeholder="Your company name">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="ui-ux-design">UI/UX Design</option>
+                            <option value="e-commerce">E-commerce Solutions</option>
+                            <option value="digital-strategy">Digital Strategy</option>
+                            <option value="maintenance">Website Maintenance</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-10k">Under $10,000</option>
+                            <option value="10k-25k">$10,000 - $25,000</option>
+                            <option value="25k-50k">$25,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k-plus">$100,000+</option>
+                            <option value="discuss">Let's discuss</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Project Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-month">Within 1 month</option>
+                            <option value="2-3-months">2-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-months-plus">6+ months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, goals, and any specific requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Why Contact TechVision?</h3>
+                <div class="mb-3">
+                    <h4>🚀 Free Consultation</h4>
+                    <p>Get expert advice and project insights at no cost. We'll analyze your needs and provide strategic recommendations.</p>
+                </div>
+                <div class="mb-3">
+                    <h4>⚡ Quick Response</h4>
+                    <p>We respond to all inquiries within 2-4 hours during business days. Urgent requests are handled immediately.</p>
+                </div>
+                <div class="mb-3">
+                    <h4>💡 Custom Solutions</h4>
+                    <p>Every project is unique. We create tailored solutions that perfectly match your business needs and goals.</p>
+                </div>
+                <div class="mb-3">
+                    <h4>🤝 Partnership Approach</h4>
+                    <p>We become your long-term technology partner, supporting your growth and evolution in the digital space.</p>
+                </div>
+                <div class="mb-3">
+                    <h4>🔒 Confidential & Secure</h4>
+                    <p>Your ideas and information are safe with us. We sign NDAs and maintain strict confidentiality.</p>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="/about" class="btn">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card text-center">
+            <h2>Other Ways to Connect</h2>
+            <div class="grid">
+                <div>
+                    <h3>💬 Live Chat</h3>
+                    <p>Get instant answers to your questions through our live chat support available during business hours.</p>
+                    <button class="btn" onclick="alert('Live chat would open here!')">Start Chat</button>
+                </div>
+                <div>
+                    <h3>📅 Schedule a Call</h3>
+                    <p>Book a 30-minute consultation call to discuss your project in detail with our team.</p>
+                    <button class="btn" onclick="alert('Calendar booking would open here!')">Book Call</button>
+                </div>
+                <div>
+                    <h3>📁 Request Quote</h3>
+                    <p>Get a detailed project quote by filling out our comprehensive project requirements form.</p>
+                    <button class="btn" onclick="alert('Quote form would open here!')">Get Quote</button>
+                </div>
+                <div>
+                    <h3>🎯 Project Planner</h3>
+                    <p>Use our interactive project planner to outline your requirements and get instant estimates.</p>
+                    <button class="btn" onclick="alert('Project planner would open here!')">Start Planning</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h2>What Happens Next?</h2>
+                <ol style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Initial Response:</strong> We'll acknowledge your inquiry within 2-4 hours</li>
+                    <li><strong>Discovery Call:</strong> Schedule a detailed discussion about your project</li>
+                    <li><strong>Proposal:</strong> Receive a customized proposal with timeline and pricing</li>
+                    <li><strong>Planning:</strong> Finalize project scope and kick-off development</li>
+                    <li><strong>Execution:</strong> Regular updates and milestone deliveries</li>
+                    <li><strong>Launch:</strong> Project delivery with full support and documentation</li>
+                </ol>
+            </div>
+            <div class="feature-icon">🗺️</div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Validate required fields
+            const requiredFields = ['name', 'email', 'message'];
+            const missingFields = requiredFields.filter(field => !data[field]);
+            
+            if (missingFields.length > 0) {
+                alert(`Please fill in the following required fields: ${missingFields.join(', ')}`);
+                return;
+            }
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.innerHTML = '<span class="loading"></span> Sending Message...';
+            submitBtn.disabled = true;
+            
+            // Add submission animation
+            this.style.opacity = '0.7';
+            this.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                // Success message
+                alert(`Thank you, ${data.name}! 
+
+Your message has been sent successfully. Here's what we received:
+• Service Interest: ${data.service || 'Not specified'}
+• Budget Range: ${data.budget || 'Not specified'}  
+• Timeline: ${data.timeline || 'Not specified'}
+
+We'll respond to ${data.email} within 2-4 hours during business days. 
+
+For urgent matters, please call us at +1 (555) 123-4567.`);
+                
+                // Reset form
+                this.reset();
+                this.style.opacity = '1';
+                this.style.pointerEvents = 'auto';
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Add success animation
+                const successMessage = document.createElement('div');
+                successMessage.innerHTML = '<div style="background: var(--accent-gradient); color: white; padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center; animation: fadeInUp 0.5s ease;">✅ Message sent successfully! We\'ll be in touch soon.</div>';
+                this.parentNode.appendChild(successMessage);
+                
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+                
+            }, 2500);
+        });
+
+        // Add real-time form validation
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value.trim()) {
+                    this.style.borderColor = 'rgba(245, 87, 108, 0.8)';
+                    this.style.boxShadow = '0 0 10px rgba(245, 87, 108, 0.3)';
+                } else if (this.type === 'email' && this.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(this.value)) {
+                        this.style.borderColor = 'rgba(245, 87, 108, 0.8)';
+                        this.style.boxShadow = '0 0 10px rgba(245, 87, 108, 0.3)';
+                    } else {
+                        this.style.borderColor = 'rgba(79, 172, 254, 0.8)';
+                        this.style.boxShadow = '0 0 10px rgba(79, 172, 254, 0.3)';
+                    }
+                } else {
+                    this.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                    this.style.boxShadow = 'none';
+                }
+            });
+            
+            input.addEventListener('focus', function() {
+                this.style.borderColor = 'rgba(79, 172, 254, 0.8)';
+                this.style.boxShadow = '0 0 20px rgba(79, 172, 254, 0.3)';
+            });
+        });
+
+        // Add animation to contact items
+        const contactItems = document.querySelectorAll('.contact-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(20px)';
+                        entry.target.style.transition = 'all 0.6s ease';
+                        
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 50);
+                    }, index * 200);
+                }
+            });
+        });
+
+        contactItems.forEach(item => observer.observe(item));
+    </script>
 </body>
 </html>

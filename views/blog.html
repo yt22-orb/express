@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog - My Modern Website</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Blog</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/blog">Blog</a>
+        </nav>
+
+        <main id="posts" aria-live="polite" aria-busy="true"></main>
+    </div>
+
+    <script>
+        async function loadPosts() {
+            try {
+                const response = await fetch('/api/posts');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const posts = await response.json();
+                const postsContainer = document.getElementById('posts');
+
+                postsContainer.innerHTML = posts.map(post => `
+          <article>
+            <h2>${post.title}</h2>
+            <p>${post.content}</p>
+          </article>
+        `).join('');
+                postsContainer.setAttribute('aria-busy', 'false');
+            } catch (err) {
+                console.error('Error loading posts:', err);
+                document.getElementById('posts').innerHTML = '<p>Failed to load posts.</p>';
+            }
+        }
+
+        loadPosts();
+    </script>
+</body>
+
+</html>
