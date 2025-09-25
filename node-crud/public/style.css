@@ -1,0 +1,225 @@
+/*================================================
+  GLOBAL STYLES AND TYPOGRAPHY (HOLIDAY THEME)
+================================================*/
+body {
+  /* Deep, elegant Christmas Green background */
+  background-color: #004d40; 
+  font-family: 'Arial', sans-serif; 
+  font-size: 16px;
+  padding: 60px 20px;
+  color: #f0f0f0; /* Snowy White text for contrast */
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* LINKS */
+a {
+  color: #ffcc00; /* Festive Gold Links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff; /* Snowy White hover */
+  text-decoration: underline;
+}
+
+/*================================================
+  CONTAINER (THE GIFT BOX CARD)
+================================================*/
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px; 
+  /* Warm, off-white/cream background */
+  background-color: #fcfcfc; 
+  border-radius: 12px;
+  /* Soft, gift-like shadow */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  /* Thick festive border */
+  border: 4px dashed #b71c1c; /* Christmas Red Dashed Border */
+}
+
+/* HEADINGS AND NAVIGATION BUTTON */
+.container h1 {
+    color: #004d40; /* Dark Green Heading Color */
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    /* Gold separator for elegance */
+    border-bottom: 3px solid #ffcc00; 
+    letter-spacing: 0.5px;
+}
+
+.container h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center; /* Center the main button */
+}
+
+/* CREATE/BACK BUTTON (THE RIBBON) */
+.container h3 a, 
+.container a.create-button {
+  padding: 10px 25px;
+  background-color: #b71c1c; /* Primary Red Button */
+  border-radius: 25px; /* Pill shape for festive flair */
+  color: #ffffff; 
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.container h3 a:hover,
+.container a.create-button:hover {
+  background-color: #d32f2f; /* Brighter Red hover */
+  transform: translateY(-2px);
+}
+
+/*================================================
+  FORM AND TABLE STYLES
+================================================*/
+
+.container form {
+    margin-top: 20px;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.container table tr td {
+  padding: 15px 0; 
+  vertical-align: middle;
+}
+
+.container table tr td:first-child {
+    font-weight: 600;
+    width: 35%; 
+    padding-right: 25px;
+    color: #004d40; /* Dark Green Label color */
+}
+
+/* INPUTS AND TEXTAREAS */
+.container table tr td input[type="text"], 
+.container table tr td input[type="number"], 
+.container table tr td textarea {
+  border: 1px solid #e0e0e0; 
+  padding: 12px 15px;
+  border-radius: 6px;
+  width: 100%; 
+  box-sizing: border-box; 
+  color: #333333; /* Make input text dark for readability */
+  background-color: #ffffff; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container table tr td input:focus, 
+.container table tr td textarea:focus {
+  border-color: #b71c1c; /* Red Focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(183, 28, 28, 0.3); /* Red focus ring */
+}
+
+/* SUBMIT BUTTON (Save/Update) */
+.container table tr td input[type="submit"] {
+  appearance: none; 
+  cursor: pointer;
+  border: none;
+  background-color: #ffcc00; /* Primary action: Gold */
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #004d40; /* Dark Green Text */
+  margin-top: 30px; 
+  padding: 14px 30px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  width: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.container table tr td input[type="submit"]:hover {
+  background-color: #e5b800; /* Darker Gold hover */
+  transform: translateY(-2px); 
+}
+
+/*================================================
+  LIST TABLE (FOR INDEX.EJS)
+================================================*/
+.container .list-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden; 
+  margin-top: 25px;
+}
+
+.container .list-table th, 
+.container .list-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333333; /* Make table data text dark for readability */
+}
+
+.container .list-table th {
+  background-color: #b71c1c; /* Red Header */
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.container .list-table tr:nth-child(even) {
+    background-color: #f7f7f7; /* Very slight striping */
+}
+
+.container .list-table tr:hover {
+    background-color: #fff0f0; /* Very light Red hover effect */
+}
+
+.container .list-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Delete button text style */
+.container .list-table button[type="submit"] {
+    color: #8b0000 !important; /* Darker red for delete link */
+    text-decoration: underline !important;
+}
+
+/*================================================
+  ERROR DISPLAY
+================================================*/
+/* Reusing the general error structure, but with Green/Red colors */
+.container > div[style] {
+    border: none !important; 
+    border-left: 4px solid #b71c1c !important; /* Red line for error clarity */
+    background-color: #ffe0b2 !important; /* Light orange background */
+    color: #4b0000 !important; /* Dark red text */
+    padding: 15px !important;
+    border-radius: 6px;
+    margin-bottom: 25px !important;
+}
+
+.container > div[style] h4 {
+    color: #4b0000 !important;
+}
+
+/*================================================
+  SHOW PAGE SPECIFIC STYLES (Readability Fix)
+================================================*/
+/* Target the data on the show page specifically */
+.container table td {
+    /* Ensure all data cells have a clear, dark color */
+    color: #333333; 
+}

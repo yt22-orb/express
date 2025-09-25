@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee: <%= employee.name %></title>
+    <link rel="stylesheet" href="/style.css" /> 
+</head>
+<body>
+  
+<div class="container">
+  <h3><a href="/employees">Employee List</a></h3>
+  <h1>Edit Employee: <%= employee.name %></h1>
+
+  <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+    <div style="color: red; border: 1px solid red; padding: 10px; margin-bottom: 15px;">
+      <h4>Validation Errors:</h4>
+      <ul>
+        <% errors.forEach(error => { %>
+          <li><%= error %></li>
+        <% }); %>
+      </ul>
+    </div>
+  <% } %>
+
+  <form action="/employees/update/<%= employee._id %>" method="post">
+    <table>
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" name="name" value="<%= employee.name %>" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><textarea name="address"><%= employee.address %></textarea></td>
+        </tr>
+        <tr>
+          <td>Position</td>
+          <td><input type="text" name="position" value="<%= employee.position %>" /></td>
+        </tr>
+        <tr>
+          <td>Salary</td>
+          <td><input type="number" name="salary" value="<%= employee.salary %>" /></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" value="Update" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+</body>
+</html>
